@@ -26,6 +26,11 @@ body {
   margin: 0;
   margin-bottom: 3rem; }
 
+.title-2 {
+  font-size: 3.2rem;
+  width: 100%;
+  border-bottom: 1px solid #000; }
+
 .aside {
   float: left;
   margin-right: 3.4rem; }
@@ -52,7 +57,8 @@ body {
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 40rem;
+  grid-template-rows: 40rem 40rem 40rem;
+  row-gap: 3rem;
   column-gap: 3rem; }
 
 .card {
@@ -64,7 +70,8 @@ body {
   box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.25);
   position: relative;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  cursor: pointer; }
   .card-title {
     font-size: 2rem;
     position: absolute;
@@ -76,6 +83,7 @@ body {
     width: 100%;
     padding: 1.1rem; }
     .card-title svg {
+      cursor: pointer;
       width: 1.7rem;
       height: 1.7rem; }
   .card_new {
@@ -83,6 +91,61 @@ body {
     .card_new > .card-title {
       color: #fff;
       text-align: center; }
+
+.desk {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 35rem;
+  width: 100%;
+  height: 100%;
+  float: both;
+  background-color: #fff;
+  padding: 2.4rem 3.7rem;
+  margin-bottom: 2rem;
+  align-content: center; }
+  .desk-tab {
+    margin-bottom: 2.6rem;
+    border: 1px solid #000;
+    text-align: center; }
+  .desk-area {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0.5rem; }
+
+.tab {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 0.5rem; }
+
+.note-create {
+  display: none;
+  position: absolute;
+  top: 53%;
+  left: 54%; }
+
+textarea {
+  box-shadow: 10px 10px 24px 0 rgba(0, 0, 0, 0.75);
+  width: 275px;
+  border: none;
+  height: 275px;
+  padding: 40px 25px 25px 25px;
+  background-color: #7E93BD;
+  color: #fff;
+  outline: none; }
+  textarea svg {
+    fill: #fff; }
+
+#check-icon {
+  position: absolute;
+  right: 17%;
+  top: 4%; }
+
+#x-icon {
+  position: absolute;
+  right: 5%;
+  top: 4%; }
 
 .dropdown {
   min-width: 10rem;
@@ -100,10 +163,6 @@ body {
   cursor: pointer;
   transition: background-color 0.3s; }
 
-.select-clicked {
-  border: 2px #26489a solid;
-  box-shadow: 0 0 0 0.5rem #26489a; }
-
 .select:hover {
   background-color: #323741; }
 
@@ -120,6 +179,7 @@ body {
 
 .menu {
   list-style: none;
+  margin-top: 1rem;
   padding: 0.2rem 0.5rem;
   background-color: #323741;
   border: 1px #363a43 solid;
@@ -216,7 +276,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5.1rem; }
+  margin-bottom: 3.1rem; }
   .header-logo {
     width: 7.4rem;
     height: 6.6rem; }
@@ -250,6 +310,10 @@ body {
   text-decoration: none;
   font-size: 1.8rem;
   width: 50%; }
+  .btn-desk {
+    width: 100%;
+    text-align: center;
+    justify-content: center; }
   .btn-icon {
     width: 2.4rem;
     height: 2.4rem;
@@ -283,5 +347,8 @@ body {
 .main {
   width: 100%;
   height: 100%; }
+  .main_desk {
+    width: 76%;
+    float: right; }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,11 +2,11 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/style.css">
   <title>workflow</title>
-  <link rel="stylesheet" href="./styles/style.css" />
 </head>
 
 <body>
@@ -156,38 +156,55 @@
       </ul>
     </aside>
 
-    <main class="main">
+    <main class="main main_desk">
       <h1 class="title-1">
-        Недавние проекты
+        Название проекта
       </h1>
-      <div class="cards" id="cards">
-        <div id="newCard" class="card card_new">
-          <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg"
-            class="card-icon">
-            <path
-              d="M65.3125 33C65.3125 33.547 65.0952 34.0716 64.7084 34.4584C64.3216 34.8452 63.797 35.0625 63.25 35.0625H35.0625V63.25C35.0625 63.797 34.8452 64.3216 34.4584 64.7084C34.0716 65.0952 33.547 65.3125 33 65.3125C32.453 65.3125 31.9284 65.0952 31.5416 64.7084C31.1548 64.3216 30.9375 63.797 30.9375 63.25V35.0625H2.75C2.20299 35.0625 1.67839 34.8452 1.29159 34.4584C0.904798 34.0716 0.6875 33.547 0.6875 33C0.6875 32.453 0.904798 31.9284 1.29159 31.5416C1.67839 31.1548 2.20299 30.9375 2.75 30.9375H30.9375V2.75C30.9375 2.20299 31.1548 1.67839 31.5416 1.29159C31.9284 0.904798 32.453 0.6875 33 0.6875C33.547 0.6875 34.0716 0.904798 34.4584 1.29159C34.8452 1.67839 35.0625 2.20299 35.0625 2.75V30.9375H63.25C63.797 30.9375 64.3216 31.1548 64.7084 31.5416C65.0952 31.9284 65.3125 32.453 65.3125 33Z"
-              fill="white" />
-          </svg>
 
-          <span class="card-title"> Создать проект </span>
+      <div class="desk">
+        <div class="desk-tab desk-new">
+          <h2 class="title-2">Новые</h2>
+          <div class="desk-area tab">
+
+          </div>
         </div>
+        <div class="desk-tab desk-in-progress">
+          <h2 class="title-2">В работе</h2>
+          <div class="desk-area-progress tab">
 
-        <div class="card">
-          <span class="card-title">
-            Название проекта
-            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          </div>
+        </div>
+        <div class="desk-tab desk-done">
+          <h2 class="title-2">Закончены</h2>
+          <div class="desk-area-done tab">
+
+          </div>
+        </div>
+        <button onclick="typeNote()" class="btn btn-desk">Создать задачу</button>
+
+        <div class="note-create">
+          <form>
+            <textarea style="resize: none" id="note-text" placeholder="Write Note..." maxlength="96"></textarea>
+            <svg id="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-check-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
               <path
-                d="M17.4682 6.41667L12.4265 5.97917L10.4578 1.34375C10.1036 0.5 8.89527 0.5 8.5411 1.34375L6.57235 5.98958L1.5411 6.41667C0.624435 6.48958 0.249435 7.63542 0.947351 8.23958L4.77027 11.5521L3.62443 16.4688C3.4161 17.3646 4.38485 18.0729 5.17652 17.5938L9.49943 14.9896L13.8224 17.6042C14.614 18.0833 15.5828 17.375 15.3744 16.4792L14.2286 11.5521L18.0515 8.23958C18.7494 7.63542 18.3848 6.48958 17.4682 6.41667ZM9.49943 13.0417L5.58277 15.4062L6.62443 10.9479L3.1661 7.94792L7.7286 7.55208L9.49943 3.35417L11.2807 7.5625L15.8432 7.95833L12.3849 10.9583L13.4265 15.4167L9.49943 13.0417Z"
-                fill="#AEAEAE" />
-            </svg></span>
+                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+            </svg>
+            <svg id="x-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-x-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </form>
         </div>
-
+      </div>
     </main>
   </div>
-</body>
 
-<script src="./js/search.js"></script>
-<script src="./js/main.js"></script>
-<script src="./js/dropdown.js"></script>
+  <script src="../js/note.js"></script>
+  <script src="../js/dropdown.js"></script>
+</body>
 
 </html>

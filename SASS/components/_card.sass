@@ -1,7 +1,8 @@
 .cards
     display: grid
     grid-template-columns: repeat(3, 1fr)
-    grid-template-rows: 40rem
+    grid-template-rows: 40rem 40rem 40rem
+    row-gap: 3rem
     column-gap: 3rem
 
 .card
@@ -14,6 +15,7 @@
     position: relative
     align-items: center
     justify-content: center
+    cursor: pointer
     &-title
         font-size: 2rem
         position: absolute
@@ -25,6 +27,7 @@
         width: 100%
         padding: 1.1rem
         & svg
+            cursor: pointer
             width: 1.7rem
             height: 1.7rem
     &_new

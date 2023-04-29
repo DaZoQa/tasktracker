@@ -1,0 +1,53 @@
+.desk
+  display: grid
+  grid-template-columns: repeat(3,1fr)
+  grid-template-rows: 35rem
+  width: 100%
+  height: 100%
+  float: both
+  background-color: #fff
+  padding: 2.4rem 3.7rem
+  margin-bottom: 2rem
+  align-content: center
+  &-tab
+    margin-bottom: 2.6rem
+    border: 1px solid #000
+    text-align: center
+  &-area
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    padding: .5rem
+
+.tab
+  display: flex
+  justify-content: flex-start
+  flex-wrap: wrap
+  padding: .5rem
+
+.note-create
+  display: none
+  position: absolute
+  top: 53%
+  left: 54%
+
+textarea
+  box-shadow: 10px 10px 24px 0 rgba(0, 0, 0, 0.75)
+  width: 275px
+  border: none
+  height: 275px
+  padding: 40px 25px 25px 25px
+  background-color: #7E93BD
+  color: #fff
+  outline: none
+  & svg
+    fill: #fff
+#check-icon
+  position: absolute
+  right: 17%
+  top: 4%
+
+#x-icon
+  position: absolute
+  right: 5%
+  top: 4%
