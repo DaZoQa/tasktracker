@@ -1,0 +1,34 @@
+.cards
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: 40rem
+    column-gap: 3rem
+
+.card
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    border-radius: 1.1rem
+    box-shadow: 0rem .2rem .4rem rgba(0, 0, 0, 0.25)
+    position: relative
+    align-items: center
+    justify-content: center
+    &-title
+        font-size: 2rem
+        position: absolute
+        bottom: 0
+        text-align: left
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        padding: 1.1rem
+        & svg
+            width: 1.7rem
+            height: 1.7rem
+    &_new
+        background-color: #7E93BD
+        & > .card-title
+            color: #fff
+            text-align: center
