@@ -6,10 +6,15 @@ cardCreate.addEventListener("click", () => {
 });
 
 function createCard() {
+  const href = document.createElement('a')
   const card = document.createElement("div");
   const cardTitle = document.createElement("span");
   const cardImg = document.createElement("svg");
 
+  href.setAttribute(
+    'href',
+    './pages/desk.html'
+  )
   cardTitle.textContent = "Название проекта";
   cardTitle.innerHTML += `<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path
@@ -19,8 +24,8 @@ function createCard() {
 
   card.classList.add("card");
   cardTitle.classList.add("card-title");
-
   card.appendChild(cardTitle);
+  href.appendChild(card)
 
-  cards.appendChild(card);
+  cards.appendChild(href);
 }
